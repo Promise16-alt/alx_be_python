@@ -7,5 +7,6 @@ elif operation == "-":
     print (f"The result is {num1 - num2}")
 elif operation == "*":
     print (f"The result is {num1 * num2}")
-else:
-    print (f"The result is {num1 / num2}")
+elif num2 == "0":
+    print ("cannot devide by zero")
+else:print (f"The result is {num1 / num2}.")
