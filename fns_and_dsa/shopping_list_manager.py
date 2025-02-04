@@ -45,4 +45,4 @@ def main():
             print("Invalid choice. Please enter a number between 1 and 4.")
 
 if __name__ == "__main__":
-    main(
+    main()
