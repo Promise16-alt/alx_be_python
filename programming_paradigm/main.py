@@ -1,16 +1,17 @@
-import sys
-from robust_division_calculator import safe_divide
+def safe_divide(numerator, denominator):
+    """
+    Performs division while handling errors such as division by zero and non-numeric inputs.
+    """
+    try:
+        # Convert inputs to float for division
+        num = float(numerator)
+        denom = float(denominator)
 
-def main():
-    if len(sys.argv) != 3:
-        print("Usage: python main.py <numerator> <denominator>")
-        sys.exit(1)
+        if denom == 0:
+            return "Error: Cannot divide by zero."
 
-    numerator = sys.argv[1]
-    denominator = sys.argv[2]
+        return f"The result of the division is {num / denom:.2f}"
 
-    result = safe_divide(numerator, denominator)
-    print(result)
-
-if __name__ == "__main__":
-    main()
+    except ValueError:
+        # Catch non-numeric input errors
+        return "Error: Please enter numeric values only."
